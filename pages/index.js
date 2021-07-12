@@ -7,14 +7,13 @@ import { ItemContext } from '../contexts/ItemContext';
 export default function Home() {
   const [items, setItems] = useState([])
   const addItem = item => {
-    const newItems = [item, ...items]
+    const newItems = [ ...items, item]
     setItems(newItems)
   }
   const deleteItem = id => {
     let newArr = [...items].filter(item => item.id !== id)
     setItems(newArr)
   }
-  console.log(items)
   return (
     <div className={styles.container}>
       <Head>
