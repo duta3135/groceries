@@ -14,6 +14,7 @@ export default function Home() {
     let newArr = [...items].filter(item => item.id !== id)
     setItems(newArr)
   }
+  console.log(items)
   return (
     <div className={styles.container}>
       <Head>
